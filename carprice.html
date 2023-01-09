@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-pale-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-pale-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  </div>
+</div>
+
+<style>
+  img {
+    border-radius: 50%;
+  }
+</style>
+
+<!-- Header -->
+<header class="w3-container w3-pale-green w3-center" style="padding:128px 16px">
+  <img src="images/thumbs/01.jpg", alt=" "  style="width:350px" /></a>
+  <h1 class="w3-margin w3-jumbo">Car Price Predictive Analysis</h1>
+  <p class="w3-xlarge">Identifying the Car Variables that Determine the Car's Overall Price</p>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Business Case</h1>
+      <h5 class="w3-text-dark-grey">A Chinese automobile company, Geely Auto, aspires to enter the US market 
+        by setting up their manufacturing unit there and produce cars locally to give competition to
+        their US and European counterparts. They have contracted an automobile consulting company to understand the factors on which
+        the pricing of cars depends on. Specifically, they want to understand the factors that affect the 
+        pricing of cars in the US market. <br><br><strong> The company wants to know the following:</strong><br>
+        • Which variables are significant in predicting the price of a car?<br>
+        • How well do those variables describe the price of a car?<br><br>
+        Based on various market surveys, the consulting firm has gathered a large data set of different
+        types of cars across the US market.
+      </h5>
+
+
+        <h1>Objective</h1>
+        <h5 class="w3-text-dark-grey">As consultants, we are required to model the price of cars with the
+            available independent variables. It will be used by Geely Auto's management to understand how exactly the prices 
+            vary with the independent variables. Then they can accordingly manipulate the design of the cars, 
+            the business strategy, etc. to meet certain price levels. Further, the model will be a good way
+            for management to understand the pricing dynamics of the US market.
+        </h5>
+  
+
+        <h1>Tools and Techniques Used</h1>
+        <h5 class="w3-text-dark-grey">
+            • <strong>Programming Language:</strong> R<br>
+        </h5>
+      </div>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img src="code/carparts.jpg" style="border-radius: 0%; margin-top: 10px; width:100%">
+    </div>
+  </div>
+</div>
+
+<!--<head>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  </style>
+  </head>
+-->
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+      </div>
+  
+      <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h2>Dataset Variables</h2>
+        
+        <a href="code/CarPrice_Dataset.csv" >Car Price Dataset</a><br>
+
+        <table>
+          <tr>
+            <th>Variables</th>
+            <th>Description</th>
+            <th>Data Type</th>
+          </tr>
+          <tr>
+            <td>car_ID</td>
+            <td>Unique ID of each observation</td>
+            <td>Integer</td>
+          </tr>
+          <tr>
+            <td>symboling</td>
+            <td>Insurance risk rating where value of +3 indicates that the auto is risky while -3 means it's probably pretty safe</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>CarName</td>
+            <td>Name of a car company</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>fueltype</td>
+            <td>Car fuel type i.e gas or diesel </td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>aspiration</td>
+            <td>Aspiration used in a car</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>doornumber</td>
+            <td>Number of doors in a car</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>carbody</td>
+            <td>The body of the car</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>drivewheel</td>
+            <td>Type of drive wheel</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>enginelocation</td>
+            <td>Location of a car engine</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>wheelbase</td>
+            <td>Wheelbase of a car</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>carlength</td>
+            <td>Length of the car</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>carwidth</td>
+            <td>Width of the car</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>carheight</td>
+            <td>Height of car</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>Curbweight</td>
+            <td>The weight of a car without occupants or baggage</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>enginetype</td>
+            <td>Type of engine</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>cylindernumber</td>
+            <td>Cylinder placed in the car</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>enginesize</td>
+            <td>Size of the car</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>fuelsystem</td>
+            <td>Fuel system of car</td>
+            <td>Categorical</td>
+          </tr>
+          <tr>
+            <td>boreratio</td>
+            <td>Boreration of a car</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>stroke</td>
+            <td>Stroke or volume inside the engine</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>compressionratio</td>
+            <td>Compression ratio of a car</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>horsepower</td>
+            <td>Horsepower of car</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>peakrpm</td>
+            <td>Car peak revolutions per minute</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>citympg</td>
+            <td>Mileage in the city</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>highwaympg</td>
+            <td>Mileage on highway</td>
+            <td>Numeric</td>
+          </tr>
+          <tr>
+            <td>price</td>
+            <td>Price of the car</td>
+            <td>Numeric (Dependent Variable)</td>
+          </tr>
+        </table> <br><br>
+
+
+
+        <h1>Cleaning Data</h1>
+        <h5>Before we can explore this dataset, we have to make sure the data is clean.
+
+          The <strong>CarName</strong> column was split into two columns: <strong>CarMake</strong> and <strong>CarModel</strong> to make it easier to explore. However, there seems to be discrepancies in the names.<br>
+          <img src="code/uniquecarmake.jpg" alt="uniquecarmake" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+          This was corrected by replacing the misspellings of the car make names by the correct spelling. <br><br>
+          <img src="code/correctedcarmake.jpg" alt="correctedcarmake" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+          <h1>Understanding the Data</h1>
+          <h5>From the bar plot below, we can see counts of the different Car Makes from the given dataset. We can observe that there are a high count of <strong>Toyota cars </strong> (total:32) and low number of <strong>Mercury cars </strong>(total:1). </h5><br><br>
+          <img src="code/carmakecount.jpeg" alt="countcarmake" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+          <h5>The following <strong>price density plot </strong> allows us to see where the prices generally lie among the car makes. The plot shows that the prices are <strong>positively skewed</strong>. These kind of distributions are right-skewed, where probabilities diminish the higher the price. </h5>
+          <img src="code/pricedensityplot.jpg" alt="pricedensity" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+          <img src="code/priceplot.jpg" alt="priceplot" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+          <h5>The following <strong> Price Box Plot </strong> allows us to see where the price range of each car make. In conclusion, the lowest priced car is the <strong>Subaru Hatchback ($5,118)</strong>, the highest priced car is the 
+          <strong>Buick Regal Sport Coupe ($45,400)</strong> and the median price of the overall dataset is <strong>$10,295</strong>.</h5>
+          <img src="code/priceboxplot.jpg" alt="priceboxplot" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+          </h5>
+            
+          <h1> Observing the Categorical Variables</h1>
+          <h5> The boxplots below show how each categorical value ranges in price. This is used to demonstrate its significance to the overall dataset.
+            We can observe the following: RWD Drive Wheels, 8-cylinder vehicles, and engines located in the rear end of the car (common among sport and luxury cars) tend to be priced higher while the number of doors on a car doesn't make much of a price difference.
+          </h5>
+          <img src="code/Row1.jpg" alt="row1boxplot" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+          <img src="code/Row2.jpg" alt="row2boxplot" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+          <img src="code/Row3.jpg" alt="row3boxplot" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+    </div>
+               <h1>Building a Regression Model</h1>
+    <h5>  In the given dataset, we have a total of 205 observations. The first 165 observations of the dataset will be used for the training set. <strong>Training sets</strong> are normally used to 
+        train machine learning models from the data given. To judge the predictive performance 
+        of the selected model, we will hold the last 40 observations from the data set as the test set. The <strong>test set</strong>
+        will be used to estimate the prediction error of the model. 
+
+    </h5>
+    <h1>Strong Correlation with Price</h1>
+    <h5> The heat map illustrates both negative and positive correlation between the independent variables with price, the dependent variable.
+      <img src="code/corrcode.jpg" alt="corrcode" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+      <img src="code/heatmapcorr.jpg" alt="heatmap" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+    </h5>
+
+      From this map, we can observe that the top variables with strong correlations are the following:
+      highwaympg, citympg, horsepower, boreratio, enginesize, curbweight, carwidth, carlength, and wheelbase. 
+
+      <h1>Variable Selection</h1>
+
+      First, we want to identify if multicollinearity exists among the car variables. <strong>Multicollinearity</strong> is a statistical concept where several independent variables in a model
+      are correlated. This becomes an issue because it leads to an unreliable regression model.<br> Variance Inflation Factor (VIF) in R was used to address this multicollinearity issue and is used
+      to identify the variance of a regression coefficient inflated. Due to this, we are left with the following variables: highwaympg, boreratio, enginesize, carwidth and wheelbase.
+
+
+      <h5>Second method used was <strong>LASSO Regression Analysis</strong>. This regression was used to determine the variables with the most significance
+      from the list of variables with strong correlation with price. LASSO (short for Least Absolute Skrinkage and Selection Operator) shrinks insignificant regression coefficients
+      down to zero, leaving non-zero values to be selected for the final data model.
+    
+    
+      The <strong>final model</strong> selects the following variables:</strong></h5>
+        • <strong>Highway MPG:</strong> the average a car will get while driving on an open stretch of road without stopping or starting, typically at a higher speed. In general, cars with a higher Highway MPG tend to be priced lower meaning they're more fuel-efficient. <br>
+        • <strong>Engine Size:</strong> the volume of fuel and air that can be pushed through a car's cylinders and measured in cubic centimeters. Because of this, the larger the engine size, the higher priced the car is. <br>
+        • <strong>Car Make and Model:</strong> branding also makes a difference in pricing. Luxury and sports cars tend to be marketed as more sophisticated, therefore higher priced.
+
+        Due to the summary of the final model, the adjusted R-Squared is 0.82. This means that the model is <strong>82%</strong> of variance, indicated the model is a good fit.
+
+        <h1>Model Validation</h1>
+
+        The test set was then used to predict the Y-values: <br>
+        <img src="code/pred.jpg" alt="pred" style="border-radius: 0%; margin-top: 10px; width:100%"><br><br>
+
+        The Mean-Squared Error (MSE) was calculated and falls at 22%. This demonstrates the amount of error in the final model.
+
+          <h1>Recommendations</h1>
+          <h5> Geely Auto should take the selected variables as top priority when considering what kind of vehicles to have on the lot. It would be beneficial for the dealership to have a bit of range in regards to the type of car being offered. 
+            However, it may be best to have majority of cars on the affordable side of the price range in order to accomodate to the cars on demand for the general public. Geely should also keep in mind that the median price of cars are $10,295 and a popular car in the US are the Toyota model. </h5>
+    
+      </div>
+  
+
+    </div>
+  </div>
+  
+
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">"The mind that opens to a new idea never returns to its original size."</h1>
+</div>
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
